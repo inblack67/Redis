@@ -1,10 +1,6 @@
-import handler from "../../src/handler";
-import redis from 'redis'
+import handler, { client } from "../../src/handler";
 import axios from 'axios'
 import 'colors'
-
-const REDIS_PORT = process.env.PORT || 6379;
-const client = redis.createClient(REDIS_PORT);
 
 export default handler
   .use((req, res, next) => {
